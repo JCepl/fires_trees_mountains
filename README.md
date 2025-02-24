@@ -26,13 +26,15 @@ Key Steps
 ```
    FDS outputs slice data (*.slcf files) that contain temperature fields over time.
 
- 4.	Python script for Heatmaps
+ 3.	Python script for Heatmaps
 		A Python notebook (extract_slices.ipynp) reads the FDS slice files with fdsreader.
 		It converts them into arrays, and then writes out each time step as a simple .txt heatmap.
 
- 5.	Contour Conversion in R
+ 4.	Contour Conversion in R
   	Another R script (generate_polygons.R) launches a Shiny app that loads the .txt heatmaps and uses terra and sf to create vector contour       polygons at specified temperature intervals.
 	  Colors and boundary thresholds can be adjusted interactively and then exported to SVG.
 
- 6.	Post-Processing in Inkscape
+ 5.	Post-Processing in Inkscape
 	  The final SVG polygons are imported into Inkscape, where the final campfire is assembled
+
+![My SVG Image](campfire_image.svg)
